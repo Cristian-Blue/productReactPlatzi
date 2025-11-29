@@ -28,7 +28,7 @@ function App() {
         <Box component="main" sx={{ flexGrow: 1, p: 3 , paddingTop: '5em'}}>
           <Routes>
             <Route index element={<ProductsPages />}></Route>
-            <Route index element={<RegisterPage />}></Route>
+            <Route path="/register" element={<RegisterPage />}></Route>
             <Route path="/category" element={<CategoryPages />}></Route>
             <Route path="/users" element={<UsersPages />}></Route>
           </Routes>
