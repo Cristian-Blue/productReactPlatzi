@@ -8,13 +8,13 @@ import { ProductsPages } from "./pages/products/products.pages";
 import { CategoryPages } from "./pages/category/category.pages";
 import { UsersPages } from "./pages/users/users.pages";
 import RegisterPage from "./pages/products/register.pages";
+import { ToastContainer } from "react-toastify";
  
 function App() {
   const [open, setOpen] = useState(true);
   const [width, setWidth] = useState(300);
 
   const handleDrawerOpen = () => {
-    console.log('adsfadf')
     setOpen(!open);
     setWidth(open ? 0 : 300);
   };
@@ -22,6 +22,7 @@ function App() {
 
   return (
     <BrowserRouter>
+      <ToastContainer autoClose={3000} position="top-right" theme="dark"/>
       <Box sx={{ display: 'flex' }}>
         <Header click={handleDrawerOpen} />
         <DrawerCustom open={open} width={width}/>

@@ -4,6 +4,7 @@ import { CardComponent, CardUser } from "../../components/card/card.components"
 import { getProducts } from "../../services/products.service"
 import { getCategory } from "../../services/category.service"
 import { getUsers } from "../../services/users.service"
+import FullScreenLoader from "../../components/loader/loader.component"
 
 export const UsersPages = () =>{
     const [users, setUsers] = useState([])
@@ -20,7 +21,7 @@ export const UsersPages = () =>{
     }, [])
 
     if (loading) {
-        return (<h1>Loading...</h1>  );
+        return (<FullScreenLoader />  );
     }
 
     return (

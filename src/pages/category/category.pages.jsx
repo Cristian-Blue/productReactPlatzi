@@ -1,8 +1,8 @@
 import { Grid } from "@mui/material"
 import { useEffect, useState } from "react"
 import { CardComponent } from "../../components/card/card.components"
-import { getProducts } from "../../services/products.service"
 import { getCategory } from "../../services/category.service"
+import FullScreenLoader from "../../components/loader/loader.component"
 
 export const CategoryPages = () =>{
     const [category, setCategory] = useState([])
@@ -19,7 +19,7 @@ export const CategoryPages = () =>{
     }, [])
 
     if (loading) {
-        return (<h1>Loading...</h1>  );
+        return (<FullScreenLoader />);
     }
 
     return (

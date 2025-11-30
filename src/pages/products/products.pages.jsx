@@ -2,6 +2,7 @@ import { Grid } from "@mui/material"
 import { useEffect, useState } from "react"
 import { CardComponent } from "../../components/card/card.components"
 import { getProducts } from "../../services/products.service"
+import FullScreenLoader from "../../components/loader/loader.component"
 
 export const ProductsPages = () =>{
     const [products, setProducts] = useState([])
@@ -18,7 +19,7 @@ export const ProductsPages = () =>{
     }, [])
 
     if (loading) {
-        return (<h1>Loading...</h1>  );
+        return (<FullScreenLoader />);
     }
 
     return (
