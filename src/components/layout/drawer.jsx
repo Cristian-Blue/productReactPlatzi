@@ -3,6 +3,7 @@ import InventoryIcon from '@mui/icons-material/Inventory';
 import PersonIcon from '@mui/icons-material/Person';
 import CategoryIcon from '@mui/icons-material/Category';
 import { Link } from "react-router-dom";
+import AppRegistrationIcon from '@mui/icons-material/AppRegistration';
 
 export const DrawerCustom = ({ open, width }) => {
   return (
@@ -20,15 +21,16 @@ export const DrawerCustom = ({ open, width }) => {
       <Box sx={{ overflow: 'auto', p: 0 }}>
         <List>
           <ListItem disablePadding>
-            <ListItemButton component={Link} to="/register">
-              <ListItemIcon><InventoryIcon /></ListItemIcon>
-              <ListItemText primary="Register product" />
-            </ListItemButton>
-          </ListItem>
-          <ListItem disablePadding>
             <ListItemButton component={Link} to="/">
               <ListItemIcon><InventoryIcon /></ListItemIcon>
               <ListItemText primary="Product" />
+            </ListItemButton>
+          </ListItem>
+
+          <ListItem disablePadding>
+            <ListItemButton component={Link} to="/register">
+              <ListItemIcon><AppRegistrationIcon /></ListItemIcon>
+              <ListItemText primary="Register product" />
             </ListItemButton>
           </ListItem>
 
