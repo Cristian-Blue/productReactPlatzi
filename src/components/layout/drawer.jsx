@@ -26,7 +26,7 @@ export const DrawerCustom = ({ open, width }) => {
               <ListItemText primary="Product" />
             </ListItemButton>
           </ListItem>
-
+          {/*
           <ListItem disablePadding>
             <ListItemButton component={Link} to="/register">
               <ListItemIcon><AppRegistrationIcon /></ListItemIcon>
@@ -40,7 +40,7 @@ export const DrawerCustom = ({ open, width }) => {
               <ListItemText primary="Category" />
             </ListItemButton>
           </ListItem>
-
+          */}
           <ListItem disablePadding>
             <ListItemButton component={Link} to="/users">
               <ListItemIcon><PersonIcon /></ListItemIcon>

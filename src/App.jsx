@@ -9,6 +9,7 @@ import { CategoryPages } from "./pages/category/category.pages";
 import { UsersPages } from "./pages/users/users.pages";
 import RegisterPage from "./pages/products/register.pages";
 import { ToastContainer } from "react-toastify";
+import { DetailProduct } from "./pages/products/detailProduct.pages";
  
 function App() {
   const [open, setOpen] = useState(true);
@@ -32,6 +33,8 @@ function App() {
             <Route path="/register" element={<RegisterPage />}></Route>
             <Route path="/category" element={<CategoryPages />}></Route>
             <Route path="/users" element={<UsersPages />}></Route>
+            <Route path="/products" element={<ProductsPages />}></Route>
+            <Route path="/products/:id" element={<DetailProduct />}></Route>
           </Routes>
         </Box>
       </Box>

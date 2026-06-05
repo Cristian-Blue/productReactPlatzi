@@ -6,6 +6,12 @@ export const getProducts = async () => {
     return response.data
 }
 
+export const getProduct = async (id) => {
+    const response =  await axios.get(`${PLATZI_STORE_API_URL}${PRODUCTS}/${id}`)
+    return response.data
+}
+
+
 export const postProducts = async (product) =>{
     try{
         const response = await axios.post(`${PLATZI_STORE_API_URL}${PRODUCTS}`, product)

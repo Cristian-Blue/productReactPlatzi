@@ -3,8 +3,9 @@ import { useEffect, useState } from "react"
 import { CardComponent } from "../../components/card/card.components"
 import { getProducts } from "../../services/products.service"
 import FullScreenLoader from "../../components/loader/loader.component"
+import { Link } from "react-router-dom"
 
-export const ProductsPages = () =>{
+export const ProductsPages = () => {
     const [products, setProducts] = useState([])
     const [loading, setLoading] = useState(true)
 
@@ -14,7 +15,7 @@ export const ProductsPages = () =>{
         setLoading(false)
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         getProductsView()
     }, [])
 
@@ -26,16 +27,18 @@ export const ProductsPages = () =>{
         <>
             <h1>Products Available</h1>
             <Grid container spacing={2}>
-                {products.map((product, i ) => {
+                {products.map((product, i) => {
                     return (
                         <Grid size={{ sx: 12, md: 4 }} key={`prodcut-${i}`}>
-                            <CardComponent title={product.title} description={product.description} price={product.price} img={product.images[0]} />
+                            <Link to={`/products/${product.id}`}>
+                                <CardComponent title={product.title} description={product.description} price={product.price} img={product.images[0]} />
+                            </Link>
                         </Grid>
                     )
                 })}
             </Grid>
 
-            
+
         </>
     )
 }
